@@ -27,6 +27,7 @@ const CartContext = createContext<CartContext | null>(null);
 
 const CartProvider: React.FC = ({ children }) => {
   const [products, setProducts] = useState<Product[]>([]);
+  console.log(products);
 
   useEffect(() => {
     async function loadProducts(): Promise<void> {
@@ -40,7 +41,7 @@ const CartProvider: React.FC = ({ children }) => {
   }, []);
 
   const addToCart = useCallback(
-    async product => {
+    async (product: Product) => {
       const sameProduct = products.find(
         oldProduct => oldProduct.id === product.id,
       );
@@ -50,12 +51,20 @@ const CartProvider: React.FC = ({ children }) => {
         return;
       }
 
+      const newProduct = {
+        id: product.id,
+        title: product.title,
+        image_url: product.image_url,
+        price: product.price,
+        quantity: 1,
+      };
+
+      setProducts([...products, newProduct]);
+
       await AsyncStorage.setItem(
         '@GoMarketplace:products',
-        JSON.stringify([...products, product]),
+        JSON.stringify(products),
       );
-
-      setProducts([...products, product]);
     },
     [products],
   );
@@ -86,7 +95,7 @@ const CartProvider: React.FC = ({ children }) => {
       const productIndex = products.findIndex(product => product.id === id);
       const newProduct = products.find(product => product.id === id);
 
-      if (newProduct) {
+      if (newProduct && newProduct.quantity > 1) {
         newProduct.quantity -= 1;
 
         products.splice(productIndex, 1, newProduct);

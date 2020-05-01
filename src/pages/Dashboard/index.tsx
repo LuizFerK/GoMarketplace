@@ -4,7 +4,7 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 import { View, Image } from 'react-native';
 
 import formatValue from '../../utils/formatValue';
-import { useCart } from '../../hooks/cart';
+import { useCart, Product as CartProduct } from '../../hooks/cart';
 import api from '../../services/api';
 
 import FloatingCart from '../../components/FloatingCart';
@@ -43,16 +43,8 @@ const Dashboard: React.FC = () => {
     loadProducts();
   }, []);
 
-  function handleAddToCart(item: Product): void {
-    const product = {
-      id: item.id,
-      title: item.title,
-      image_url: item.image_url,
-      price: item.price,
-      quantity: 1,
-    };
-
-    addToCart(product);
+  function handleAddToCart(item: CartProduct): void {
+    addToCart(item);
   }
 
   return (
