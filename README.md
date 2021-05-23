@@ -8,19 +8,19 @@
 
 <p align="center">
 	<a href="https://github.com/LuizFerK">
-		<img alt="Author" src="https://img.shields.io/badge/author-Luiz%20Fernando-8E54E9?style=flat" />
+		<img alt="Author" src="https://img.shields.io/badge/author-Luiz%20Fernando-E83F5B?style=flat" />
 	</a>
 	<a href="#">
-		<img alt="Languages" src="https://img.shields.io/github/languages/count/LuizFerK/GoMarketplace?color=8E54E9&style=flat" />
+		<img alt="Languages" src="https://img.shields.io/github/languages/count/LuizFerK/GoMarketplace?color=E83F5B&style=flat" />
 	</a>
 	<a href="hhttps://github.com/LuizFerK/GoMarketplace/stargazers">
-		<img alt="Stars" src="https://img.shields.io/github/stars/LuizFerK/GoMarketplace?color=8E54E9&style=flat" />
+		<img alt="Stars" src="https://img.shields.io/github/stars/LuizFerK/GoMarketplace?color=E83F5B&style=flat" />
 	</a>
 	<a href="https://github.com/LuizFerK/GoMarketplace/network/members">
-		<img alt="Forks" src="https://img.shields.io/github/forks/LuizFerK/GoMarketplace?color=8E54E9&style=flat" />
+		<img alt="Forks" src="https://img.shields.io/github/forks/LuizFerK/GoMarketplace?color=E83F5B&style=flat" />
 	</a>
 	<a href="https://github.com/LuizFerK/GoMarketplace/graphs/contributors">
-		<img alt="Contributors" src="https://img.shields.io/github/contributors/LuizFerK/GoMarketplace?color=8E54E9&style=flat" />
+		<img alt="Contributors" src="https://img.shields.io/github/contributors/LuizFerK/GoMarketplace?color=E83F5B&style=flat" />
 	</a>
 </p>
 
